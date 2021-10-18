@@ -7,8 +7,8 @@ from lib import *
 
 class BaselineSolver:
     def __init__(self, users, orgs):
-        self.users = users
-        self.orgs = orgs
+        self.users = users.copy()
+        self.orgs = orgs.copy()
         self.spb_orgs = orgs[orgs['city'] == 'spb']['org_id']
         self.msk_orgs = orgs[orgs['city'] == 'msk']['org_id']
     
